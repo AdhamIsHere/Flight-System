@@ -30,7 +30,7 @@ namespace Flight_System
         {
             DataTable flightData = new DataTable();
 
-            string connectionString = "Data Source=ADHAM;Initial Catalog=TEST;Integrated Security=True";
+            string connectionString = "workstation id=Flight-system.mssql.somee.com;packet size=4096;user id=AdhamIsHere_SQLLogin_1;pwd=v3itc814el;data source=Flight-system.mssql.somee.com;persist security info=False;initial catalog=Flight-system";
             string query = "  SELECT [FLIGHT].ID,  [AIRPORT_FROM].CITY AS [FROM],  [AIRPORT_TO].CITY AS [TO],  [FLIGHT].DEPARTURE,  [FLIGHT].ARRIVAL FROM  [FLIGHT] JOIN [AIRPORT] AS [AIRPORT_FROM] ON [FLIGHT].AIRPORT_SOURCE = [AIRPORT_FROM].ID JOIN  [AIRPORT] AS [AIRPORT_TO] ON [FLIGHT].AIRPORT_DESTINATION = [AIRPORT_TO].ID";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -57,7 +57,7 @@ namespace Flight_System
             else
             {
                 DataTable flightData = new DataTable();
-                string connectionString = "Data Source=ADHAM;Initial Catalog=TEST;Integrated Security=True";
+                string connectionString = "workstation id=Flight-system.mssql.somee.com;packet size=4096;user id=AdhamIsHere_SQLLogin_1;pwd=v3itc814el;data source=Flight-system.mssql.somee.com;persist security info=False;initial catalog=Flight-system";
                 string query = "select* from " +
                     "(SELECT [FLIGHT].ID, " +
                     " [AIRPORT_FROM].CITY AS [FROM], " +
@@ -140,7 +140,7 @@ namespace Flight_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=ADHAM;Initial Catalog=TEST;Integrated Security=True";
+            string connectionString = "workstation id=Flight-system.mssql.somee.com;packet size=4096;user id=AdhamIsHere_SQLLogin_1;pwd=v3itc814el;data source=Flight-system.mssql.somee.com;persist security info=False;initial catalog=Flight-system";
             string insertTicketQuery = "INSERT INTO TICKET (FLIGHT_ID, CLASS, PRICE) VALUES (@F, @C, @P)";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

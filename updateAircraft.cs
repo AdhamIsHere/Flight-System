@@ -37,7 +37,7 @@ namespace Flight_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=ADHAM;Initial Catalog=TEST;Integrated Security=True";
+            string connectionString = "workstation id=Flight-system.mssql.somee.com;packet size=4096;user id=AdhamIsHere_SQLLogin_1;pwd=v3itc814el;data source=Flight-system.mssql.somee.com;persist security info=False;initial catalog=Flight-system";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "SELECT * FROM [AIRCRAFT] WHERE ID = @Id";
@@ -67,7 +67,7 @@ namespace Flight_System
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=ADHAM;Initial Catalog=TEST;Integrated Security=True";
+            string connectionString = "workstation id=Flight-system.mssql.somee.com;packet size=4096;user id=AdhamIsHere_SQLLogin_1;pwd=v3itc814el;data source=Flight-system.mssql.somee.com;persist security info=False;initial catalog=Flight-system";
             string query = "UPDATE [AIRCRAFT] SET TYPE=@T, MODEL=@M, CAPACITY =@C WHERE ID= @ID";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

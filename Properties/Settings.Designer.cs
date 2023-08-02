@@ -26,7 +26,7 @@ namespace Flight_System.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADHAM;Initial Catalog=TEST;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("workstation id=Flight-system.mssql.somee.com;packet size=4096;user id=AdhamIsHere_SQLLogin_1;pwd=v3itc814el;data source=Flight-system.mssql.somee.com;persist security info=False;initial catalog=Flight-system")]
         public string TESTConnectionString {
             get {
                 return ((string)(this["TESTConnectionString"]));

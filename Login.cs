@@ -24,7 +24,7 @@ namespace Flight_System
         }
         private void Logbtn_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=ADHAM;Initial Catalog=TEST;Integrated Security=True";
+            string connectionString = "workstation id=Flight-system.mssql.somee.com;packet size=4096;user id=AdhamIsHere_SQLLogin_1;pwd=v3itc814el;data source=Flight-system.mssql.somee.com;persist security info=False;initial catalog=Flight-system";
             string query = "SELECT COUNT(*) FROM [USER] WHERE EMAIL = @Email and PASSWORD = @Password";
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand command = new SqlCommand(query, connection);

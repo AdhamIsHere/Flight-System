@@ -30,7 +30,7 @@ namespace Flight_System
 
         private void Report_Load(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=ADHAM;Initial Catalog=TEST;Integrated Security=True";
+            string connectionString = "workstation id=Flight-system.mssql.somee.com;packet size=4096;user id=AdhamIsHere_SQLLogin_1;pwd=v3itc814el;data source=Flight-system.mssql.somee.com;persist security info=False;initial catalog=Flight-system";
             string query = "SELECT source.COUNTRY AS [Source Country], source.CITY AS [Source City], dest.COUNTRY AS [Destination Country], dest.CITY AS [Destination e City],COUNT(*) AS FlightCount FROM Flight JOIN Airport AS source ON Flight.Airport_Source = source.ID JOIN Airport AS dest ON Flight.Airport_Destination = dest.ID GROUP BY dest.COUNTRY, source.COUNTRY,dest.CITY, source.CITY;";            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
@@ -46,7 +46,7 @@ namespace Flight_System
         {
             if (checkBox1.Checked)
             {
-                string connectionString = "Data Source=ADHAM;Initial Catalog=TEST;Integrated Security=True";
+                string connectionString = "workstation id=Flight-system.mssql.somee.com;packet size=4096;user id=AdhamIsHere_SQLLogin_1;pwd=v3itc814el;data source=Flight-system.mssql.somee.com;persist security info=False;initial catalog=Flight-system";
                 string query = "SELECT source.COUNTRY AS [Source Country], source.CITY AS [Source City],COUNT(*) AS FlightCount FROM Flight JOIN Airport AS source ON Flight.Airport_Source = source.ID  GROUP BY source.COUNTRY, source.CITY;";
                 checkBox2.Checked = false;
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -61,7 +61,7 @@ namespace Flight_System
             }
             else
             {               
-                string connectionString = "Data Source=ADHAM;Initial Catalog=TEST;Integrated Security=True";
+                string connectionString = "workstation id=Flight-system.mssql.somee.com;packet size=4096;user id=AdhamIsHere_SQLLogin_1;pwd=v3itc814el;data source=Flight-system.mssql.somee.com;persist security info=False;initial catalog=Flight-system";
                 string query = "SELECT source.COUNTRY AS [Source Country], source.CITY AS [Source City], dest.COUNTRY AS [Destination Country], dest.CITY AS [Destination e City],COUNT(*) AS FlightCount FROM Flight JOIN Airport AS source ON Flight.Airport_Source = source.ID JOIN Airport AS dest ON Flight.Airport_Destination = dest.ID GROUP BY dest.COUNTRY, source.COUNTRY,dest.CITY, source.CITY;";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -79,7 +79,7 @@ namespace Flight_System
             if (checkBox2.Checked)
             {
                 checkBox1.Checked = false;
-                string connectionString = "Data Source=ADHAM;Initial Catalog=TEST;Integrated Security=True";
+                string connectionString = "workstation id=Flight-system.mssql.somee.com;packet size=4096;user id=AdhamIsHere_SQLLogin_1;pwd=v3itc814el;data source=Flight-system.mssql.somee.com;persist security info=False;initial catalog=Flight-system";
                 string query = "SELECT  dest.COUNTRY AS [Destination Country], dest.CITY AS [Destination e City],COUNT(*) AS FlightCount FROM Flight JOIN Airport AS dest ON Flight.Airport_Destination = dest.ID GROUP BY dest.COUNTRY,dest.CITY";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -94,7 +94,7 @@ namespace Flight_System
             else
             {
                 
-                string connectionString = "Data Source=ADHAM;Initial Catalog=TEST;Integrated Security=True";
+                string connectionString = "workstation id=Flight-system.mssql.somee.com;packet size=4096;user id=AdhamIsHere_SQLLogin_1;pwd=v3itc814el;data source=Flight-system.mssql.somee.com;persist security info=False;initial catalog=Flight-system";
                 string query = "SELECT source.COUNTRY AS [Source Country], source.CITY AS [Source City], dest.COUNTRY AS [Destination Country], dest.CITY AS [Destination e City],COUNT(*) AS FlightCount FROM Flight JOIN Airport AS source ON Flight.Airport_Source = source.ID JOIN Airport AS dest ON Flight.Airport_Destination = dest.ID GROUP BY dest.COUNTRY, source.COUNTRY,dest.CITY, source.CITY;";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {

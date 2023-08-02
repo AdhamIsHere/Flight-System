@@ -43,7 +43,7 @@ namespace Flight_System
         private DataTable PerformJoinOperation()
         {
             DataTable resultTable = new DataTable();
-            string connectionString = "Data Source=ADHAM;Initial Catalog=TEST;Integrated Security=True";
+            string connectionString = "workstation id=Flight-system.mssql.somee.com;packet size=4096;user id=AdhamIsHere_SQLLogin_1;pwd=v3itc814el;data source=Flight-system.mssql.somee.com;persist security info=False;initial catalog=Flight-system";
             SqlConnection connection = new SqlConnection(connectionString);
             string query = " SELECT [TICKET].ID AS [TICKET ID],  [TICKET].CLASS, [AIRPORT_FROM].CITY AS [FROM],  [AIRPORT_TO].CITY AS [TO], [FLIGHT].DEPARTURE,  [FLIGHT].ARRIVAL FROM   [TICKET] JOIN   [FLIGHT] ON [TICKET].FLIGHT_ID = [FLIGHT].ID JOIN  [RESERVATION] ON [RESERVATION].TICKET_ID = [TICKET].ID JOIN   [AIRPORT] AS [AIRPORT_FROM] ON [FLIGHT].AIRPORT_SOURCE = [AIRPORT_FROM].ID JOIN  [AIRPORT] AS [AIRPORT_TO] ON [FLIGHT].AIRPORT_DESTINATION = [AIRPORT_TO].ID WHERE   [RESERVATION].USER_ID = @id ";
             SqlCommand command = new SqlCommand(query, connection);
@@ -68,7 +68,7 @@ namespace Flight_System
             }
             else
             {
-                string connectionString = "Data Source=ADHAM;Initial Catalog=TEST;Integrated Security=True";
+                string connectionString = "workstation id=Flight-system.mssql.somee.com;packet size=4096;user id=AdhamIsHere_SQLLogin_1;pwd=v3itc814el;data source=Flight-system.mssql.somee.com;persist security info=False;initial catalog=Flight-system";
                 string query = "DELETE FROM RESERVATION WHERE TICKET_ID=@ID";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
